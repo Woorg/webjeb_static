@@ -1,0 +1,25 @@
+// .nav
+
+.nav
+	&.nav_dark
+		.nav__link
+			color #000000
+			&:after
+				background #000
+.nav__list
+	font-size 0
+.nav__item
+	margin-left 38px
+	@extends .ib
+	color #FFF
+	font-family $al
+	font-size 16px
+	line-height 1
+	text-transform uppercase
+	letter-spacing tracking(100)
+	&:first-child
+		margin-left 0
+	a
+		color inherit
+		text-decoration none
+		@extends .underline

@@ -1,0 +1,43 @@
+.how
+	background transparent url('../images/general/how-bg.jpg') 50% + 10px 0 / cover no-repeat
+	&__in
+		@extends .in
+		padding-top $section-padding-vert
+		padding-bottom $section-padding-vert
+		min-height 517px
+		color #fff
+	&__title
+		@extends .title-h2
+		margin-bottom 90px
+		text-align center
+	&__list
+		font-size 0
+	&__item
+		position relative
+		margin-right 12px
+		@extends .ib
+		font-size 16px
+		text-align left
+		&:nth-child(1n)
+			padding-right 54px
+			width 342px
+		&:nth-child(2n)
+			padding-right 130px
+			width 442px
+		&:nth-child(3n)
+			padding-right 46px
+			margin-right 0
+			width 290px
+		&:after
+			position absolute
+			top -50px
+			left 0
+			content attr(data-number)
+			font-size 42px
+			line-height 1
+			color #FFF
+	&__item-title
+		margin-bottom 20px
+		@extends .title-h3
+	&__text
+		line-height 26px

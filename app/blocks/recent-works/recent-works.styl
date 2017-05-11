@@ -1,0 +1,55 @@
+.recent-works
+	&__in
+		@extends .in
+		padding-top $section-padding-vert
+		padding-bottom $section-padding-vert
+		padding-left 0
+		padding-right 0
+		text-align center
+	&__title
+		margin-bottom 22px
+		@extends .title-h2
+	&__text
+		margin-bottom 66px
+		color #000000
+	&__list
+		font-size 0
+	&__item
+		margin-right 30px
+		margin-bottom 50px
+		@extends .ib
+		&:nth-child(2n)
+			margin-right 0
+	&__image
+		margin-bottom 30px
+		display block
+		width 570px
+		opacity 1
+		transition opacity .2s ease
+		&:hover
+			opacity .8
+		img
+			max-width 100%
+			height auto
+
+	&__item-title
+		margin-bottom 15px
+		font-family $al
+		font-size 20px
+		line-height 32px
+	&__cat
+		color #cccccc
+	&__cat-link
+		display block
+		@extends .title-h3
+		color inherit
+		line-height 1.6
+
+		text-transform uppercase
+		text-decoration none
+
+		transition color .2s ease
+		&:hover
+			color darken(#cccccc, 10)
+	&__button
+		@extends .button_black

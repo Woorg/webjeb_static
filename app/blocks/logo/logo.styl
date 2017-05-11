@@ -1,0 +1,28 @@
+.logo
+	position relative
+	padding-left 38px
+	color #FFF
+	font-family $al
+	font-size 18px
+	line-height 1
+	letter-spacing tracking(200)
+	text-transform uppercase
+	text-decoration none
+	opacity 1
+	transition opacity .2s ease
+	will-change initial
+	&:hover
+		opacity .9
+
+	&:after
+		position absolute
+		top 50%
+		left 0
+		margin-top -13px
+		content ''
+		retinaSprite($logo_icon_group)
+
+	&.logo_dark
+		color #000
+		&:after
+			retinaSprite($logo_icon_dark_group)
