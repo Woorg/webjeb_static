@@ -1,0 +1,52 @@
+.pagination
+	position relative
+	z-index 1
+	margin-bottom 30px
+	font-family $ar
+	font-size 20px
+	line-height 1
+	text-align center
+	.page-numbers
+		border-bottom 1px solid lighten(#01579b, 60)
+		margin-left 10px
+		display inline-block
+		vertical-align top
+		color #212121
+		&:first-child
+			margin-left 0
+		&.current
+			border-bottom 1px solid transparent
+			font-family $am
+
+
+
+.post-navigation
+	h2
+		@extends .title-h3
+
+	.nav-links
+		@extends .title-h2
+		font-size 16px
+
+	a
+		border-bottom 1px solid lighten(#01579b, 60)
+		color #01579b
+
+.nav-previous,
+.nav-next
+	position relative
+	padding-left 30px
+	&:after
+		position absolute
+		top 50%
+		left 0
+		margin-top -9px
+		content "←"
+		font-family $ar
+		font-size 16px
+		line-height 1
+
+.nav-next
+	&:after
+		content "→"
+

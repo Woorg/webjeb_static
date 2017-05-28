@@ -16,14 +16,21 @@ gulp.task('server', () => (
 				match: /<\/body>/i
 			}
 		},
-		server: {
-			baseDir: [
-				'app/resources',
-				'dist'
-			],
-			directory: false,
-			middleware: NODE_ENV !== 'production' ? [debuga()] : []
+		proxy: 'http://webjeb.local',
+		rewriteRules: {
+			match: new RegExp('</head>'),
+			fn: function() {
+				return '<link rel="hobo" rel="stylesheet" type="text/css" href="assets/styles/app.min.css"'
+			}
 		},
+		// server: {
+		// 	baseDir: [
+		// 		'app/resources',
+		// 		'dist'
+		// 	],
+		// 	directory: false,
+		// 	middleware: NODE_ENV !== 'production' ? [debuga()] : []
+		// },
 		tunnel: !!TUNNEL
 	})
 ));
